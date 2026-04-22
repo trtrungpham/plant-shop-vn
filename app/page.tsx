@@ -4,6 +4,7 @@ import CategoryGrid from "@/components/CategoryGrid";
 import FlashSaleBar from "@/components/FlashSaleBar";
 import PromoStrip from "@/components/PromoStrip";
 import ProductCard from "@/components/ProductCard";
+import Footer from "@/components/Footer";
 import { products, getFlashSaleProducts } from "@/lib/products";
 
 export default function HomePage() {
@@ -30,6 +31,7 @@ export default function HomePage() {
       </div>
 
       <div className="text-center text-xs text-gray-400 py-4">— Bạn đã xem hết rồi —</div>
+      <Footer />
     </>
   );
 }

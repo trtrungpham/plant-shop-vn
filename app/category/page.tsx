@@ -1,5 +1,6 @@
 import Link from "next/link";
 import MobileHeader from "@/components/MobileHeader";
+import Footer from "@/components/Footer";
 import { categories, getProductsByCategory } from "@/lib/products";
 import Image from "next/image";
 
@@ -35,6 +36,7 @@ export default function CategoryIndexPage() {
           );
         })}
       </div>
+      <Footer />
     </>
   );
 }

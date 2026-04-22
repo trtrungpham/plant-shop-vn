@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import MobileHeader from "@/components/MobileHeader";
+import Footer from "@/components/Footer";
 import { products } from "@/lib/products";
 import { Heart, Eye } from "lucide-react";
 
@@ -34,6 +35,7 @@ export default function LivePage() {
           </Link>
         ))}
       </div>
+      <Footer />
     </>
   );
 }

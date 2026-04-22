@@ -1,8 +1,10 @@
 "use client";
 
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect, Suspense } from "react";
+import { useSearchParams } from "next/navigation";
 import MobileHeader from "@/components/MobileHeader";
 import ProductCard from "@/components/ProductCard";
+import Footer from "@/components/Footer";
 import { products, searchProducts } from "@/lib/products";
 import { TrendingUp, Clock } from "lucide-react";
 
@@ -18,7 +20,20 @@ const TRENDING = [
 ];
 
 export default function SearchPage() {
-  const [q, setQ] = useState("");
+  return (
+    <Suspense fallback={null}>
+      <SearchInner />
+    </Suspense>
+  );
+}
+
+function SearchInner() {
+  const params = useSearchParams();
+  const initial = params.get("q") ?? "";
+  const [q, setQ] = useState(initial);
+  useEffect(() => {
+    setQ(initial);
+  }, [initial]);
   const results = useMemo(() => (q ? searchProducts(q) : []), [q]);
 
   return (
@@ -80,6 +95,7 @@ export default function SearchPage() {
           </div>
         </div>
       )}
+      <Footer />
     </>
   );
 }

@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Home, LayoutGrid, Video, ShoppingCart, User } from "lucide-react";
+import { House as Home, LayoutGrid, Video, ShoppingCart, User } from "lucide-react";
 import { useCart } from "./CartProvider";
 import clsx from "clsx";
 

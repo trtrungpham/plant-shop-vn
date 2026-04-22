@@ -1,6 +1,7 @@
 import { notFound } from "next/navigation";
 import MobileHeader from "@/components/MobileHeader";
 import ProductCard from "@/components/ProductCard";
+import Footer from "@/components/Footer";
 import { categories, getProductsByCategory } from "@/lib/products";
 
 export default async function CategoryPage(props: PageProps<"/category/[slug]">) {
@@ -24,6 +25,7 @@ export default async function CategoryPage(props: PageProps<"/category/[slug]">)
           ))}
         </div>
       )}
+      <Footer />
     </>
   );
 }

@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { ArrowLeft, Search, MessageCircle, ShoppingCart, MoreHorizontal, Share2, X } from "lucide-react";
+import { ArrowLeft, Search, MessageCircle, ShoppingCart, Ellipsis as MoreHorizontal, Share2, X } from "lucide-react";
 import { useCart } from "./CartProvider";
 
 type Props = {

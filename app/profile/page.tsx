@@ -1,5 +1,6 @@
 import { Settings, Package, Heart, Coins, Tag, MessageCircle, ChevronRight, Truck, Star, RotateCcw } from "lucide-react";
 import Link from "next/link";
+import Footer from "@/components/Footer";
 
 const orderStatuses = [
   { icon: Package, label: "Chờ xác nhận" },
@@ -71,6 +72,7 @@ export default function ProfilePage() {
       <div className="text-center text-[11px] text-gray-400 mt-6 mb-3">
         PlantShop v1.0 • Made with 🌿
       </div>
+      <Footer />
     </div>
   );
 }
