@@ -959,6 +959,37 @@ export function getFlashSaleProducts(): Product[] {
   return products.filter((p) => p.flashSale);
 }
 
+export function shopSlug(name: string): string {
+  return name
+    .toLowerCase()
+    .normalize("NFD")
+    .replace(/[̀-ͯ]/g, "")
+    .replace(/đ/g, "d")
+    .replace(/[^a-z0-9\s-]/g, "")
+    .trim()
+    .replace(/\s+/g, "-");
+}
+
+export function getShops() {
+  const map = new Map<string, { name: string; slug: string; count: number }>();
+  for (const p of products) {
+    const slug = shopSlug(p.shop);
+    const existing = map.get(slug);
+    if (existing) existing.count += 1;
+    else map.set(slug, { name: p.shop, slug, count: 1 });
+  }
+  return Array.from(map.values());
+}
+
+export function getProductsByShopSlug(slug: string): Product[] {
+  return products.filter((p) => shopSlug(p.shop) === slug);
+}
+
+export function getShopByName(name: string) {
+  const slug = shopSlug(name);
+  return getShops().find((s) => s.slug === slug);
+}
+
 export function searchProducts(q: string): Product[] {
   const query = q.toLowerCase().replace(/^#/, "").trim();
   if (!query) return products;

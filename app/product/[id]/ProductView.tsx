@@ -20,7 +20,7 @@ import {
   Bookmark,
   ArrowUp,
 } from "lucide-react";
-import { Product } from "@/lib/products";
+import { Product, shopSlug } from "@/lib/products";
 import { formatVND, percentOff } from "@/lib/format";
 import { useCart } from "@/components/CartProvider";
 import ProductCard from "@/components/ProductCard";
@@ -79,12 +79,13 @@ export default function ProductView({ product, related, sameShop }: Props) {
   return (
     <div className="bg-[#f5f5f5] min-h-screen pb-[70px]">
       <header className="sticky top-0 z-30 bg-white/95 backdrop-blur px-3 py-2.5 flex items-center gap-2">
-        <button
-          onClick={() => router.back()}
+        <Link
+          href="/"
           className="w-8 h-8 flex items-center justify-center"
+          aria-label="Về trang chủ"
         >
           <X size={22} />
-        </button>
+        </Link>
         <div className="flex-1 h-9 bg-gray-100 rounded-full flex items-center px-3 gap-2">
           <Search size={14} className="text-gray-500" />
           <span className="text-[13px] text-gray-600 truncate">trầu bà monstera</span>
@@ -287,23 +288,34 @@ export default function ProductView({ product, related, sameShop }: Props) {
       </section>
 
       <section className="bg-white mt-2 px-3 py-3 flex items-center gap-3">
-        <div className="w-10 h-10 rounded-full bg-gradient-to-br from-green-200 to-green-500 flex items-center justify-center text-white font-bold">
-          {product.shop[0]}
-        </div>
-        <div className="flex-1">
-          <div className="text-[13px] font-semibold flex items-center gap-1">
-            {product.shop}
-            <span className="text-[10px] bg-green-100 text-green-700 px-1 rounded">Mall</span>
+        <Link
+          href={`/shop/${shopSlug(product.shop)}`}
+          className="flex items-center gap-3 flex-1 min-w-0"
+        >
+          <div className="w-10 h-10 rounded-full bg-gradient-to-br from-green-200 to-green-500 flex items-center justify-center text-white font-bold shrink-0">
+            {product.shop[0]}
           </div>
-          <div className="text-[11px] text-gray-500">
-            99% phản hồi trong 24 giờ • 85% vận chuyển trong 48 giờ
+          <div className="flex-1 min-w-0">
+            <div className="text-[13px] font-semibold flex items-center gap-1 truncate">
+              {product.shop}
+              <span className="text-[10px] bg-green-100 text-green-700 px-1 rounded shrink-0">Mall</span>
+            </div>
+            <div className="text-[11px] text-gray-500 truncate">
+              99% phản hồi trong 24 giờ • 85% vận chuyển trong 48 giờ
+            </div>
           </div>
-        </div>
+        </Link>
+        <Link
+          href={`/shop/${shopSlug(product.shop)}`}
+          className="text-[12px] text-gray-700 border border-gray-300 rounded-full px-3 py-1"
+        >
+          Xem shop
+        </Link>
         <button
           onClick={() => setChatOpen(true)}
           className="text-[12px] text-tt-red border border-tt-red/60 rounded-full px-3 py-1"
         >
-          Chat ngay
+          Chat
         </button>
       </section>
 
@@ -546,10 +558,13 @@ export default function ProductView({ product, related, sameShop }: Props) {
 
       {/* Sticky Buy Bar */}
       <div className="fixed bottom-0 left-1/2 -translate-x-1/2 w-full max-w-[480px] bg-white border-t border-gray-100 px-2 py-2 flex items-center gap-2 z-40">
-        <button className="flex flex-col items-center justify-center w-11 text-gray-700">
+        <Link
+          href={`/shop/${shopSlug(product.shop)}`}
+          className="flex flex-col items-center justify-center w-11 text-gray-700"
+        >
           <Store size={18} />
           <span className="text-[9px]">Cửa hàng</span>
-        </button>
+        </Link>
         <button
           onClick={() => setChatOpen(true)}
           className="relative flex flex-col items-center justify-center w-11 text-gray-700"
