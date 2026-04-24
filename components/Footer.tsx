@@ -77,6 +77,19 @@ export default function Footer() {
         </div>
       </section>
 
+      {/* Shortcut */}
+      <section className="px-3 py-4 border-b border-gray-50">
+        <h3 className="text-[13px] font-bold mb-2">Tiện ích</h3>
+        <div className="grid grid-cols-2 gap-y-2 text-[12px] text-gray-700">
+          <Link href="/flash-sale" className="hover:text-tt-red">⚡ Flash Sale</Link>
+          <Link href="/vouchers" className="hover:text-tt-red">🎟 Kho voucher</Link>
+          <Link href="/wishlist" className="hover:text-tt-red">💗 Yêu thích</Link>
+          <Link href="/orders" className="hover:text-tt-red">📦 Đơn hàng</Link>
+          <Link href="/messages" className="hover:text-tt-red">💬 Tin nhắn</Link>
+          <Link href="/admin" className="hover:text-tt-red">🛡 Admin shop</Link>
+        </div>
+      </section>
+
       {/* Social */}
       <section className="px-3 py-4 border-b border-gray-50">
         <h3 className="text-[13px] font-bold mb-2">Kết nối với PlantShop</h3>

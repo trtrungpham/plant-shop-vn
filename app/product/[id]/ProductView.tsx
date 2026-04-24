@@ -17,7 +17,6 @@ import {
   Store,
   MessageCircle,
   Play,
-  Bookmark,
   ArrowUp,
 } from "lucide-react";
 import { Product, shopSlug } from "@/lib/products";
@@ -27,6 +26,7 @@ import ProductCard from "@/components/ProductCard";
 import ProductGallery from "@/components/ProductGallery";
 import ChatDrawer from "@/components/ChatDrawer";
 import Footer from "@/components/Footer";
+import WishlistButton from "@/components/WishlistButton";
 
 type Props = { product: Product; related: Product[]; sameShop: Product[] };
 
@@ -193,9 +193,7 @@ export default function ProductView({ product, related, sameShop }: Props) {
           <h1 className="text-[14px] leading-[18px] text-gray-900 flex-1">
             {product.name}
           </h1>
-          <button className="shrink-0">
-            <Bookmark size={18} className="text-gray-500" />
-          </button>
+          <WishlistButton id={product.id} size={20} className="shrink-0" />
         </div>
         <div className="mt-2 flex items-center gap-1 text-[12px] text-gray-700">
           <Star size={12} className="fill-tt-yellow text-tt-yellow" />

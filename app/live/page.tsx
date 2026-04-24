@@ -2,8 +2,9 @@ import Image from "next/image";
 import Link from "next/link";
 import MobileHeader from "@/components/MobileHeader";
 import Footer from "@/components/Footer";
+import WishlistButton from "@/components/WishlistButton";
 import { products } from "@/lib/products";
-import { Heart, Eye } from "lucide-react";
+import { Eye } from "lucide-react";
 
 export default function LivePage() {
   const lives = products.slice(0, 8);
@@ -29,9 +30,9 @@ export default function LivePage() {
               <div className="text-[11px] font-semibold line-clamp-1">{p.shop}</div>
               <div className="text-[10px] opacity-90 line-clamp-1">{p.name}</div>
             </div>
-            <button className="absolute bottom-10 right-2 w-8 h-8 bg-white/20 backdrop-blur rounded-full flex items-center justify-center text-white">
-              <Heart size={14} />
-            </button>
+            <div className="absolute bottom-10 right-2 w-8 h-8 bg-white/20 backdrop-blur rounded-full flex items-center justify-center text-white">
+              <WishlistButton id={p.id} size={14} />
+            </div>
           </Link>
         ))}
       </div>

@@ -3,6 +3,7 @@ import Image from "next/image";
 import { Star } from "lucide-react";
 import { Product } from "@/lib/products";
 import { formatVND, percentOff } from "@/lib/format";
+import WishlistButton from "@/components/WishlistButton";
 
 export default function ProductCard({ product }: { product: Product }) {
   const off = percentOff(product.originalPrice, product.price);
@@ -30,6 +31,9 @@ export default function ProductCard({ product }: { product: Product }) {
             XTRA Freeship
           </div>
         )}
+        <div className="absolute top-1 right-1 w-7 h-7 rounded-full bg-white/90 backdrop-blur flex items-center justify-center shadow-sm">
+          <WishlistButton id={product.id} size={15} />
+        </div>
       </div>
       <div className="p-2">
         <h3 className="text-[13px] leading-[16px] line-clamp-2 text-gray-900 min-h-[32px]">
