@@ -25,7 +25,7 @@ export default function OrderDetailPage(props: PageProps<"/orders/[id]">) {
         </header>
         <div className="flex flex-col items-center justify-center py-20 px-6 text-center">
           <p className="text-[14px]">Không tìm thấy đơn hàng</p>
-          <Link href="/orders" className="mt-4 text-tt-red text-[13px]">
+          <Link href="/orders" className="mt-4 text-brand-red text-[13px]">
             ← Quay lại danh sách đơn
           </Link>
         </div>
@@ -45,7 +45,7 @@ export default function OrderDetailPage(props: PageProps<"/orders/[id]">) {
       </header>
 
       {/* Status banner */}
-      <section className="bg-gradient-to-r from-tt-red to-[#ff6e47] text-white px-4 py-4">
+      <section className="bg-gradient-to-r from-brand-red to-[#ff6e47] text-white px-4 py-4">
         <div className="flex items-center gap-3">
           <Truck size={28} />
           <div className="flex-1">
@@ -65,7 +65,7 @@ export default function OrderDetailPage(props: PageProps<"/orders/[id]">) {
       {/* Delivery address */}
       <section className="bg-white mt-2 px-3 py-3">
         <div className="flex items-start gap-2">
-          <MapPin size={18} className="text-tt-red shrink-0 mt-0.5" />
+          <MapPin size={18} className="text-brand-red shrink-0 mt-0.5" />
           <div className="flex-1">
             <div className="text-[13px] font-semibold">Địa chỉ nhận hàng</div>
             <div className="text-[13px] mt-1">{order.customerName} — {order.customerPhone}</div>
@@ -103,7 +103,7 @@ export default function OrderDetailPage(props: PageProps<"/orders/[id]">) {
             <div className="flex-1 min-w-0">
               <h3 className="text-[13px] line-clamp-2 leading-tight">{item.name}</h3>
               <div className="mt-1 flex items-center justify-between">
-                <div className="text-tt-red font-semibold text-[13px]">{formatVND(item.price)}</div>
+                <div className="text-brand-red font-semibold text-[13px]">{formatVND(item.price)}</div>
                 <div className="text-[12px] text-gray-500">x{item.qty}</div>
               </div>
             </div>
@@ -126,12 +126,12 @@ export default function OrderDetailPage(props: PageProps<"/orders/[id]">) {
         {order.discount > 0 && (
           <div className="flex justify-between">
             <span className="text-gray-600">Giảm giá</span>
-            <span className="text-tt-red">-{formatVND(order.discount)}</span>
+            <span className="text-brand-red">-{formatVND(order.discount)}</span>
           </div>
         )}
         <div className="flex justify-between pt-2 border-t border-gray-100 font-semibold">
           <span>Thành tiền</span>
-          <span className="text-tt-red text-base">{formatVND(order.total)}</span>
+          <span className="text-brand-red text-base">{formatVND(order.total)}</span>
         </div>
       </section>
 
@@ -156,13 +156,13 @@ export default function OrderDetailPage(props: PageProps<"/orders/[id]">) {
             onClick={() => {
               if (confirm("Xác nhận huỷ đơn?")) cancelOrder(order.id);
             }}
-            className="flex-1 border border-tt-red text-tt-red py-2.5 rounded-full text-[13px]"
+            className="flex-1 border border-brand-red text-brand-red py-2.5 rounded-full text-[13px]"
           >
             Huỷ đơn
           </button>
         )}
         {order.status === "delivered" && (
-          <button className="flex-1 bg-tt-red text-white py-2.5 rounded-full text-[13px] font-semibold">
+          <button className="flex-1 bg-brand-red text-white py-2.5 rounded-full text-[13px] font-semibold">
             Đánh giá
           </button>
         )}

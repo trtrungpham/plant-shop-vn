@@ -61,16 +61,16 @@ export default function FlashSaleBar({ products }: { products: Product[] }) {
               />
             </div>
             <div className="px-1.5 py-1">
-              <div className="text-tt-red font-bold text-[13px]">
+              <div className="text-brand-red font-bold text-[13px]">
                 {formatVND(p.price)}
               </div>
-              <div className="h-1 bg-tt-red/15 rounded-full mt-1 overflow-hidden">
+              <div className="h-1 bg-brand-red/15 rounded-full mt-1 overflow-hidden">
                 <div
-                  className="h-full bg-tt-red"
+                  className="h-full bg-brand-red"
                   style={{ width: `${Math.min(95, 30 + (p.sold % 70))}%` }}
                 />
               </div>
-              <div className="text-[10px] text-tt-red font-medium mt-0.5">
+              <div className="text-[10px] text-brand-red font-medium mt-0.5">
                 Đã bán {p.sold >= 1000 ? `${(p.sold / 1000).toFixed(1)}k` : p.sold}
               </div>
             </div>

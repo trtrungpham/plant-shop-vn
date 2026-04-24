@@ -46,7 +46,7 @@ export default function MobileHeader({
         <Link href="/cart" className="relative w-8 h-8 rounded-full bg-black/40 text-white flex items-center justify-center">
           <ShoppingCart size={16} />
           {count > 0 && (
-            <span className="absolute -top-1 -right-1 bg-tt-red text-white text-[10px] leading-none font-bold min-w-[16px] h-4 px-1 rounded-full flex items-center justify-center">
+            <span className="absolute -top-1 -right-1 bg-brand-red text-white text-[10px] leading-none font-bold min-w-[16px] h-4 px-1 rounded-full flex items-center justify-center">
               {count > 99 ? "99+" : count}
             </span>
           )}
@@ -105,12 +105,12 @@ export default function MobileHeader({
       </Link>
       <Link href="/messages" className="w-9 h-9 flex items-center justify-center relative">
         <MessageCircle size={22} className="text-gray-800" />
-        <span className="absolute top-1 right-1 bg-tt-red w-2 h-2 rounded-full" />
+        <span className="absolute top-1 right-1 bg-brand-red w-2 h-2 rounded-full" />
       </Link>
       <Link href="/cart" className="w-9 h-9 flex items-center justify-center relative">
         <ShoppingCart size={22} className="text-gray-800" />
         {count > 0 && (
-          <span className="absolute top-0 right-0 bg-tt-red text-white text-[10px] leading-none font-bold min-w-[16px] h-4 px-1 rounded-full flex items-center justify-center">
+          <span className="absolute top-0 right-0 bg-brand-red text-white text-[10px] leading-none font-bold min-w-[16px] h-4 px-1 rounded-full flex items-center justify-center">
             {count > 99 ? "99+" : count}
           </span>
         )}

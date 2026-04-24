@@ -79,7 +79,7 @@ export default function BlogPage() {
           <button
             key={c}
             className={`shrink-0 text-[12px] px-3 py-1.5 rounded-full ${
-              i === 0 ? "bg-tt-red text-white" : "bg-gray-100 text-gray-700"
+              i === 0 ? "bg-brand-red text-white" : "bg-gray-100 text-gray-700"
             }`}
           >
             {c}
@@ -92,7 +92,7 @@ export default function BlogPage() {
           <article key={p.slug} className="bg-white rounded-xl overflow-hidden">
             <div className="relative aspect-[16/9] bg-gray-100">
               <Image src={p.cover} alt={p.title} fill sizes="480px" className="object-cover" />
-              <span className="absolute top-2 left-2 bg-tt-red text-white text-[10px] font-bold px-2 py-0.5 rounded-full">
+              <span className="absolute top-2 left-2 bg-brand-red text-white text-[10px] font-bold px-2 py-0.5 rounded-full">
                 {p.category}
               </span>
             </div>

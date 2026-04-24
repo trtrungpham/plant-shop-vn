@@ -37,7 +37,7 @@ export default function VouchersPage() {
 
   return (
     <>
-      <header className="sticky top-0 z-30 bg-gradient-to-r from-tt-red to-[#ff6e47] text-white px-3 py-3 flex items-center gap-2">
+      <header className="sticky top-0 z-30 bg-gradient-to-r from-brand-red to-[#ff6e47] text-white px-3 py-3 flex items-center gap-2">
         <Link href="/" className="w-8 h-8 flex items-center justify-center -ml-1 text-white">
           <ArrowLeft size={22} />
         </Link>
@@ -56,7 +56,7 @@ export default function VouchersPage() {
             key={t.key}
             onClick={() => setTab(t.key as typeof tab)}
             className={`shrink-0 text-[12px] px-3 py-1.5 rounded-full ${
-              tab === t.key ? "bg-tt-red text-white" : "bg-gray-100 text-gray-700"
+              tab === t.key ? "bg-brand-red text-white" : "bg-gray-100 text-gray-700"
             }`}
           >
             {t.label}
@@ -91,17 +91,17 @@ function VoucherCard({
 }) {
   const color =
     v.category === "freeship"
-      ? "from-tt-cyan/20 to-white border-[#0c9c94]/30"
+      ? "from-brand-cyan/20 to-white border-[#0c9c94]/30"
       : v.category === "gift"
       ? "from-[#fff8e1] to-white border-[#b77b00]/30"
-      : "from-tt-red/10 to-white border-tt-red/30";
+      : "from-brand-red/10 to-white border-brand-red/30";
 
   const leftColor =
     v.category === "freeship"
       ? "bg-[#0c9c94]"
       : v.category === "gift"
       ? "bg-[#b77b00]"
-      : "bg-tt-red";
+      : "bg-brand-red";
 
   return (
     <div className={`flex bg-gradient-to-r ${color} border rounded-xl overflow-hidden`}>
@@ -131,7 +131,7 @@ function VoucherCard({
         <div className="flex items-center gap-1">
           <h3 className="text-[13px] font-semibold truncate">{v.title}</h3>
           {v.badge && (
-            <span className="text-[10px] bg-tt-red text-white px-1 rounded font-bold">
+            <span className="text-[10px] bg-brand-red text-white px-1 rounded font-bold">
               {v.badge}
             </span>
           )}
@@ -153,7 +153,7 @@ function VoucherCard({
           ) : (
             <button
               onClick={onClaim}
-              className="text-[11px] bg-tt-red text-white font-semibold px-3 py-1 rounded-full"
+              className="text-[11px] bg-brand-red text-white font-semibold px-3 py-1 rounded-full"
             >
               Lưu ngay
             </button>

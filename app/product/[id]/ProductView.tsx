@@ -96,7 +96,7 @@ export default function ProductView({ product, related, sameShop }: Props) {
         <Link href="/cart" className="relative w-8 h-8 flex items-center justify-center">
           <ShoppingCart size={20} />
           {count > 0 && (
-            <span className="absolute -top-0.5 -right-0.5 bg-tt-red text-white text-[10px] leading-none font-bold min-w-[16px] h-4 px-1 rounded-full flex items-center justify-center">
+            <span className="absolute -top-0.5 -right-0.5 bg-brand-red text-white text-[10px] leading-none font-bold min-w-[16px] h-4 px-1 rounded-full flex items-center justify-center">
               {count > 99 ? "99+" : count}
             </span>
           )}
@@ -132,7 +132,7 @@ export default function ProductView({ product, related, sameShop }: Props) {
         <span className="shrink-0 text-[10px] bg-gradient-to-r from-[#ff2c55] to-[#ff6e47] text-white px-1.5 py-0.5 rounded font-bold">
           XTRA
         </span>
-        <span className="shrink-0 text-[10px] text-tt-red border border-tt-red/40 px-1.5 py-0.5 rounded">
+        <span className="shrink-0 text-[10px] text-brand-red border border-brand-red/40 px-1.5 py-0.5 rounded">
           EXTRA lên đến 14%
         </span>
         <span className="shrink-0 text-[10px] text-[#b77b00] bg-[#fff8e1] px-1.5 py-0.5 rounded">
@@ -142,14 +142,14 @@ export default function ProductView({ product, related, sameShop }: Props) {
 
       <section className="bg-white px-3 pt-2.5 pb-3">
         <div className="flex items-center gap-2">
-          <span className="text-[11px] font-bold text-white bg-tt-red px-1.5 py-0.5 rounded">
+          <span className="text-[11px] font-bold text-white bg-brand-red px-1.5 py-0.5 rounded">
             -{off}%
           </span>
-          <span className="text-2xl font-bold text-tt-red">
+          <span className="text-2xl font-bold text-brand-red">
             {formatVND(product.price)}
           </span>
           {product.flashSale && (
-            <div className="ml-auto flex items-center gap-1 bg-tt-red text-white text-[11px] font-bold px-2 py-1 rounded-full">
+            <div className="ml-auto flex items-center gap-1 bg-brand-red text-white text-[11px] font-bold px-2 py-1 rounded-full">
               <span>⚡ Flash Sale</span>
               <span className="font-mono">
                 {hh}:{mm}:{ss}
@@ -167,15 +167,15 @@ export default function ProductView({ product, related, sameShop }: Props) {
             {formatVND(Math.round(product.price / 12))} x 12 tháng với{" "}
             <span className="font-semibold">PayLater</span>
           </span>
-          <span className="ml-auto text-tt-red text-[11px] font-medium">Tối đa 30 triệu đ</span>
+          <span className="ml-auto text-brand-red text-[11px] font-medium">Tối đa 30 triệu đ</span>
           <ChevronRight size={14} className="text-gray-400" />
         </div>
 
         <div className="mt-2 flex items-center gap-1 overflow-x-auto no-scrollbar">
-          <span className="shrink-0 text-[11px] text-tt-red bg-tt-red/10 px-1.5 py-0.5 rounded">
+          <span className="shrink-0 text-[11px] text-brand-red bg-brand-red/10 px-1.5 py-0.5 rounded">
             🎯 Giảm đến 99%!
           </span>
-          <span className="shrink-0 text-[11px] text-tt-red bg-tt-red/10 px-1.5 py-0.5 rounded">
+          <span className="shrink-0 text-[11px] text-brand-red bg-brand-red/10 px-1.5 py-0.5 rounded">
             🎟 Giảm 15K
           </span>
           <span className="shrink-0 text-[11px] text-[#b77b00] bg-[#fff8e1] px-1.5 py-0.5 rounded">
@@ -196,7 +196,7 @@ export default function ProductView({ product, related, sameShop }: Props) {
           <WishlistButton id={product.id} size={20} className="shrink-0" />
         </div>
         <div className="mt-2 flex items-center gap-1 text-[12px] text-gray-700">
-          <Star size={12} className="fill-tt-yellow text-tt-yellow" />
+          <Star size={12} className="fill-brand-yellow text-brand-yellow" />
           <span className="font-semibold">{product.rating.toFixed(1)}</span>
           <span className="text-gray-500">({product.reviews})</span>
           <span className="text-gray-300 mx-1">|</span>
@@ -226,7 +226,7 @@ export default function ProductView({ product, related, sameShop }: Props) {
               <Link
                 key={h}
                 href={`/search?q=${encodeURIComponent(h.replace("#", ""))}`}
-                className="text-[11px] text-tt-red/90 hover:underline"
+                className="text-[11px] text-brand-red/90 hover:underline"
               >
                 {h}
               </Link>
@@ -236,12 +236,12 @@ export default function ProductView({ product, related, sameShop }: Props) {
       </section>
 
       <section className="bg-white px-3 py-2.5 mt-2 flex items-center gap-2 border-t border-gray-100">
-        <div className="w-6 h-6 rounded-full bg-tt-yellow/30 flex items-center justify-center text-xs">
+        <div className="w-6 h-6 rounded-full bg-brand-yellow/30 flex items-center justify-center text-xs">
           💰
         </div>
         <div className="text-[12px] flex-1">
           Chia sẻ để nhận{" "}
-          <span className="text-tt-red font-bold">
+          <span className="text-brand-red font-bold">
             {formatVND(Math.round(product.price * 0.09))}
           </span>{" "}
           cho mỗi lượt bán
@@ -252,20 +252,20 @@ export default function ProductView({ product, related, sameShop }: Props) {
 
       <section className="bg-white mt-2 px-3 py-3">
         <div className="flex gap-2 overflow-x-auto no-scrollbar">
-          <div className="shrink-0 min-w-[180px] bg-gradient-to-r from-tt-cyan/10 to-white rounded-lg p-2 flex items-center gap-2">
+          <div className="shrink-0 min-w-[180px] bg-gradient-to-r from-brand-cyan/10 to-white rounded-lg p-2 flex items-center gap-2">
             <span>🚚</span>
             <div className="flex-1">
               <div className="text-[12px] font-semibold">Giảm 140K đ</div>
               <div className="text-[10px] text-gray-500">cho đơn trên 250K đ</div>
             </div>
-            <button className="relative text-[11px] bg-tt-cyan/20 text-[#0c9c94] font-semibold px-2 py-1 rounded">
+            <button className="relative text-[11px] bg-brand-cyan/20 text-[#0c9c94] font-semibold px-2 py-1 rounded">
               Nhận
-              <span className="absolute -top-1 -right-1 bg-tt-red text-white text-[9px] px-1 rounded leading-tight">
+              <span className="absolute -top-1 -right-1 bg-brand-red text-white text-[9px] px-1 rounded leading-tight">
                 x30
               </span>
             </button>
           </div>
-          <div className="shrink-0 min-w-[170px] bg-gradient-to-r from-tt-cyan/10 to-white rounded-lg p-2 flex items-center gap-2">
+          <div className="shrink-0 min-w-[170px] bg-gradient-to-r from-brand-cyan/10 to-white rounded-lg p-2 flex items-center gap-2">
             <span>🚚</span>
             <div className="flex-1">
               <div className="text-[12px] font-semibold">Giao nhanh 2h</div>
@@ -276,8 +276,8 @@ export default function ProductView({ product, related, sameShop }: Props) {
 
         <div className="mt-3 flex items-center justify-between border-t border-gray-100 pt-3">
           <div className="flex items-center gap-2 text-[13px]">
-            <span className="text-tt-red font-bold">PayLater</span>
-            <span className="text-[11px] bg-tt-red/10 text-tt-red px-1.5 py-0.5 rounded">
+            <span className="text-brand-red font-bold">PayLater</span>
+            <span className="text-[11px] bg-brand-red/10 text-brand-red px-1.5 py-0.5 rounded">
               Giảm đến 99%!
             </span>
           </div>
@@ -311,7 +311,7 @@ export default function ProductView({ product, related, sameShop }: Props) {
         </Link>
         <button
           onClick={() => setChatOpen(true)}
-          className="text-[12px] text-tt-red border border-tt-red/60 rounded-full px-3 py-1"
+          className="text-[12px] text-brand-red border border-brand-red/60 rounded-full px-3 py-1"
         >
           Chat
         </button>
@@ -356,7 +356,7 @@ export default function ProductView({ product, related, sameShop }: Props) {
                 size={14}
                 className={
                   n <= Math.round(product.rating)
-                    ? "fill-tt-yellow text-tt-yellow"
+                    ? "fill-brand-yellow text-brand-yellow"
                     : "text-gray-300"
                 }
               />
@@ -370,7 +370,7 @@ export default function ProductView({ product, related, sameShop }: Props) {
           </div>
           <div className="flex gap-0.5 mt-1">
             {[1, 2, 3, 4, 5].map((n) => (
-              <Star key={n} size={11} className="fill-tt-yellow text-tt-yellow" />
+              <Star key={n} size={11} className="fill-brand-yellow text-brand-yellow" />
             ))}
           </div>
           <div className="text-[11px] text-gray-500 mt-1">Mặt hàng: Mặc định</div>
@@ -390,13 +390,13 @@ export default function ProductView({ product, related, sameShop }: Props) {
           <ChevronRight size={16} className="text-gray-400" />
         </div>
         <div className="flex gap-2 overflow-x-auto no-scrollbar mt-2">
-          <div className="shrink-0 w-[100px] rounded-lg overflow-hidden bg-gradient-to-br from-tt-red to-tt-orange p-2 text-white relative">
+          <div className="shrink-0 w-[100px] rounded-lg overflow-hidden bg-gradient-to-br from-brand-red to-brand-orange p-2 text-white relative">
             <div className="absolute top-1 right-1 text-[10px] bg-black/20 px-1 rounded">x68</div>
             <div className="text-base font-bold mt-2">Giảm 25%</div>
             <div className="text-[10px] opacity-90 mt-1 leading-tight">
               Không có mức chi tiêu tối thiểu
             </div>
-            <button className="mt-2 w-full text-[11px] bg-white text-tt-red font-bold py-1 rounded">
+            <button className="mt-2 w-full text-[11px] bg-white text-brand-red font-bold py-1 rounded">
               Nhận
             </button>
           </div>
@@ -409,8 +409,8 @@ export default function ProductView({ product, related, sameShop }: Props) {
               <div className="relative aspect-square rounded-lg overflow-hidden bg-gray-100">
                 <Image src={p.images[0]} alt={p.name} fill sizes="100px" className="object-cover" />
               </div>
-              <div className="text-[13px] font-bold text-tt-red mt-1">{formatVND(p.price)}</div>
-              <div className="text-[10px] text-tt-red">-{percentOff(p.originalPrice, p.price)}%</div>
+              <div className="text-[13px] font-bold text-brand-red mt-1">{formatVND(p.price)}</div>
+              <div className="text-[10px] text-brand-red">-{percentOff(p.originalPrice, p.price)}%</div>
             </Link>
           ))}
         </div>
@@ -465,7 +465,7 @@ export default function ProductView({ product, related, sameShop }: Props) {
           </dl>
           <button
             onClick={() => setDetailsExpanded((v) => !v)}
-            className="mt-2 text-[12px] text-tt-red flex items-center gap-1"
+            className="mt-2 text-[12px] text-brand-red flex items-center gap-1"
           >
             {detailsExpanded ? "Thu gọn" : "Xem thêm"}
             {detailsExpanded ? <ChevronUp size={14} /> : <ChevronDown size={14} />}
@@ -512,7 +512,7 @@ export default function ProductView({ product, related, sameShop }: Props) {
                       <Link
                         key={h}
                         href={`/search?q=${encodeURIComponent(h.replace("#", ""))}`}
-                        className="text-[11px] text-tt-red bg-tt-red/5 px-2 py-0.5 rounded-full"
+                        className="text-[11px] text-brand-red bg-brand-red/5 px-2 py-0.5 rounded-full"
                       >
                         {h}
                       </Link>
@@ -525,7 +525,7 @@ export default function ProductView({ product, related, sameShop }: Props) {
 
           <button
             onClick={() => setDescExpanded((v) => !v)}
-            className="mt-2 w-full text-center text-[12px] text-tt-red border-t border-gray-100 pt-2 flex items-center justify-center gap-1"
+            className="mt-2 w-full text-center text-[12px] text-brand-red border-t border-gray-100 pt-2 flex items-center justify-center gap-1"
           >
             {descExpanded ? "Thu gọn" : "Xem thêm"}
             {descExpanded ? <ChevronUp size={14} /> : <ChevronDown size={14} />}
@@ -568,20 +568,20 @@ export default function ProductView({ product, related, sameShop }: Props) {
           className="relative flex flex-col items-center justify-center w-11 text-gray-700"
         >
           <MessageCircle size={18} />
-          <span className="absolute -top-0.5 right-1 bg-tt-red text-white text-[9px] px-1 rounded leading-tight">
+          <span className="absolute -top-0.5 right-1 bg-brand-red text-white text-[9px] px-1 rounded leading-tight">
             7
           </span>
           <span className="text-[9px]">Chat</span>
         </button>
         <button
           onClick={handleAdd}
-          className="w-11 h-11 rounded-full bg-tt-red/10 text-tt-red flex items-center justify-center"
+          className="w-11 h-11 rounded-full bg-brand-red/10 text-brand-red flex items-center justify-center"
         >
           <ShoppingCart size={20} />
         </button>
         <button
           onClick={handleBuyNow}
-          className="flex-1 h-11 rounded-full bg-gradient-to-r from-tt-red to-[#ff3d5b] text-white font-bold text-sm flex flex-col items-center justify-center leading-tight pulse-red"
+          className="flex-1 h-11 rounded-full bg-gradient-to-r from-brand-red to-[#ff3d5b] text-white font-bold text-sm flex flex-col items-center justify-center leading-tight pulse-brand"
         >
           <span>Mua ngay</span>
           {product.flashSale && (

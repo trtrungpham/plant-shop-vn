@@ -37,12 +37,12 @@ export default function OrdersPage() {
             key={t.key}
             onClick={() => setTab(t.key)}
             className={`shrink-0 px-3 py-2.5 text-[12px] relative ${
-              tab === t.key ? "text-tt-red font-semibold" : "text-gray-600"
+              tab === t.key ? "text-brand-red font-semibold" : "text-gray-600"
             }`}
           >
             {t.label}
             {tab === t.key && (
-              <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-6 h-[2px] bg-tt-red rounded-full" />
+              <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-6 h-[2px] bg-brand-red rounded-full" />
             )}
           </button>
         ))}
@@ -57,7 +57,7 @@ export default function OrdersPage() {
           </p>
           <Link
             href="/"
-            className="mt-4 bg-tt-red text-white px-5 py-2 rounded-full text-sm font-medium"
+            className="mt-4 bg-brand-red text-white px-5 py-2 rounded-full text-sm font-medium"
           >
             Mua sắm ngay
           </Link>
@@ -83,7 +83,7 @@ export default function OrdersPage() {
                     <div className="flex-1 min-w-0">
                       <h3 className="text-[13px] line-clamp-2 leading-tight">{item.name}</h3>
                       <div className="mt-1 flex items-center justify-between">
-                        <div className="text-tt-red font-semibold text-[13px]">{formatVND(item.price)}</div>
+                        <div className="text-brand-red font-semibold text-[13px]">{formatVND(item.price)}</div>
                         <div className="text-[12px] text-gray-500">x{item.qty}</div>
                       </div>
                     </div>
@@ -96,7 +96,7 @@ export default function OrdersPage() {
               <div className="px-3 py-2.5 border-t border-gray-50 flex items-center justify-between">
                 <div className="text-[12px] text-gray-600">
                   {order.items.length} sản phẩm • Tổng:{" "}
-                  <span className="text-tt-red font-semibold">{formatVND(order.total)}</span>
+                  <span className="text-brand-red font-semibold">{formatVND(order.total)}</span>
                 </div>
                 <div className="flex gap-1.5">
                   {(order.status === "pending" || order.status === "packing") && (
@@ -111,7 +111,7 @@ export default function OrdersPage() {
                   )}
                   <Link
                     href={`/orders/${order.id}`}
-                    className="text-[11px] bg-tt-red text-white font-semibold px-3 py-1 rounded-full"
+                    className="text-[11px] bg-brand-red text-white font-semibold px-3 py-1 rounded-full"
                   >
                     Chi tiết
                   </Link>

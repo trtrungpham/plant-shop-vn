@@ -38,7 +38,7 @@ export default function InfoPage({
             <div className="text-[12px] font-semibold text-gray-700 mb-2">{tocTitle}</div>
             <ul className="space-y-1">
               {sections.map((s, i) => (
-                <li key={i} className="text-[12px] text-tt-red flex items-center gap-1">
+                <li key={i} className="text-[12px] text-brand-red flex items-center gap-1">
                   <ChevronRight size={12} />
                   <a href={`#s-${i}`}>{s.heading}</a>
                 </li>
@@ -50,7 +50,7 @@ export default function InfoPage({
         <div className="mt-4 space-y-5">
           {sections.map((s, i) => (
             <section key={i} id={`s-${i}`}>
-              <h3 className="text-[14px] font-bold text-gray-900 border-l-4 border-tt-red pl-2">
+              <h3 className="text-[14px] font-bold text-gray-900 border-l-4 border-brand-red pl-2">
                 {s.heading}
               </h3>
               {Array.isArray(s.body) ? (
@@ -71,7 +71,7 @@ export default function InfoPage({
         {cta && (
           <Link
             href={cta.href}
-            className="mt-6 block bg-gradient-to-r from-tt-red to-[#ff3d5b] text-white text-center font-semibold py-3 rounded-full text-sm"
+            className="mt-6 block bg-gradient-to-r from-brand-red to-[#ff3d5b] text-white text-center font-semibold py-3 rounded-full text-sm"
           >
             {cta.label}
           </Link>

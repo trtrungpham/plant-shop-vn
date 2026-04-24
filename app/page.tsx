@@ -19,9 +19,9 @@ export default function HomePage() {
       <FlashSaleBar products={flashProducts} />
 
       <div className="px-3 mt-4 mb-2 flex items-center gap-2">
-        <div className="h-[2px] flex-1 bg-gradient-to-r from-transparent to-tt-red/40" />
-        <h2 className="text-sm font-bold text-tt-red px-2">DÀNH RIÊNG CHO BẠN</h2>
-        <div className="h-[2px] flex-1 bg-gradient-to-l from-transparent to-tt-red/40" />
+        <div className="h-[2px] flex-1 bg-gradient-to-r from-transparent to-brand-red/40" />
+        <h2 className="text-sm font-bold text-brand-red px-2">DÀNH RIÊNG CHO BẠN</h2>
+        <div className="h-[2px] flex-1 bg-gradient-to-l from-transparent to-brand-red/40" />
       </div>
 
       <div className="grid grid-cols-2 gap-2 px-3">

@@ -37,7 +37,7 @@ export default function AdminDashboard() {
 
   if (!authed) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-tt-red/40 flex flex-col items-center justify-center px-6">
+      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-brand-red/40 flex flex-col items-center justify-center px-6">
         <div className="w-full bg-white rounded-2xl p-6">
           <div className="text-center">
             <div className="text-4xl mb-2">🌿</div>
@@ -51,7 +51,7 @@ export default function AdminDashboard() {
               onChange={(e) => setPass(e.target.value)}
               onKeyDown={(e) => e.key === "Enter" && login()}
               placeholder="Mật khẩu admin"
-              className="w-full h-11 border border-gray-200 rounded-lg px-3 pr-10 text-[13px] outline-none focus:border-tt-red"
+              className="w-full h-11 border border-gray-200 rounded-lg px-3 pr-10 text-[13px] outline-none focus:border-brand-red"
             />
             <button
               type="button"
@@ -63,7 +63,7 @@ export default function AdminDashboard() {
           </div>
           <button
             onClick={login}
-            className="mt-3 w-full bg-tt-red text-white font-semibold py-2.5 rounded-lg text-sm"
+            className="mt-3 w-full bg-brand-red text-white font-semibold py-2.5 rounded-lg text-sm"
           >
             Đăng nhập
           </button>
@@ -107,13 +107,13 @@ export default function AdminDashboard() {
             key={t.key}
             onClick={() => setTab(t.key as typeof tab)}
             className={`shrink-0 px-3 py-2.5 text-[12px] flex items-center gap-1 relative ${
-              tab === t.key ? "text-tt-red font-semibold" : "text-gray-600"
+              tab === t.key ? "text-brand-red font-semibold" : "text-gray-600"
             }`}
           >
             <t.Icon size={14} />
             {t.label}
             {tab === t.key && (
-              <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-8 h-[2px] bg-tt-red rounded-full" />
+              <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-8 h-[2px] bg-brand-red rounded-full" />
             )}
           </button>
         ))}
@@ -158,7 +158,7 @@ export default function AdminDashboard() {
             <div className="bg-white rounded-xl p-3">
               <div className="flex items-center justify-between mb-2">
                 <h3 className="text-[13px] font-semibold">Đơn gần đây</h3>
-                <button onClick={() => setTab("orders")} className="text-[11px] text-tt-red">
+                <button onClick={() => setTab("orders")} className="text-[11px] text-brand-red">
                   Xem tất cả →
                 </button>
               </div>
@@ -176,7 +176,7 @@ export default function AdminDashboard() {
                     >
                       <div className="font-mono text-gray-500 text-[11px]">{o.id}</div>
                       <div className="flex-1 truncate">{o.customerName}</div>
-                      <div className="text-tt-red font-semibold">{formatVND(o.total)}</div>
+                      <div className="text-brand-red font-semibold">{formatVND(o.total)}</div>
                       <span className={`text-[9px] px-1.5 py-0.5 rounded ${STATUS_COLOR[o.status]}`}>
                         {STATUS_LABEL[o.status]}
                       </span>
@@ -188,12 +188,12 @@ export default function AdminDashboard() {
 
             <div className="grid grid-cols-2 gap-2">
               <Link href="/vouchers" className="bg-white rounded-xl p-3 flex flex-col items-center text-center">
-                <Ticket size={24} className="text-tt-red" />
+                <Ticket size={24} className="text-brand-red" />
                 <span className="text-[13px] font-semibold mt-1">Voucher</span>
                 <span className="text-[11px] text-gray-500">Quản lý khuyến mãi</span>
               </Link>
               <Link href="/flash-sale" className="bg-white rounded-xl p-3 flex flex-col items-center text-center">
-                <TrendingUp size={24} className="text-tt-orange" />
+                <TrendingUp size={24} className="text-brand-orange" />
                 <span className="text-[13px] font-semibold mt-1">Flash Sale</span>
                 <span className="text-[11px] text-gray-500">Xem khung giờ vàng</span>
               </Link>
@@ -209,7 +209,7 @@ export default function AdminDashboard() {
               orders.map((o) => (
                 <div key={o.id} className="px-3 py-3 border-b border-gray-50 last:border-0">
                   <div className="flex items-center justify-between">
-                    <Link href={`/orders/${o.id}`} className="font-mono text-[12px] text-tt-red">
+                    <Link href={`/orders/${o.id}`} className="font-mono text-[12px] text-brand-red">
                       {o.id}
                     </Link>
                     <StatusSelect
@@ -225,7 +225,7 @@ export default function AdminDashboard() {
                     <span className="text-[11px] text-gray-500">
                       {o.items.length} SP • {new Date(o.createdAt).toLocaleDateString("vi-VN")}
                     </span>
-                    <span className="text-tt-red font-semibold text-[13px]">
+                    <span className="text-brand-red font-semibold text-[13px]">
                       {formatVND(o.total)}
                     </span>
                   </div>
@@ -253,9 +253,9 @@ export default function AdminDashboard() {
                   </div>
                 </div>
                 <div className="text-right shrink-0">
-                  <div className="text-tt-red font-semibold text-[12px]">{formatVND(p.price)}</div>
+                  <div className="text-brand-red font-semibold text-[12px]">{formatVND(p.price)}</div>
                   {p.flashSale && (
-                    <div className="text-[9px] bg-tt-red text-white px-1 rounded">SALE</div>
+                    <div className="text-[9px] bg-brand-red text-white px-1 rounded">SALE</div>
                   )}
                 </div>
               </Link>
@@ -278,7 +278,7 @@ export default function AdminDashboard() {
                   <div className="text-[13px] font-semibold truncate">{s.name}</div>
                   <div className="text-[11px] text-gray-500">{s.count} sản phẩm</div>
                 </div>
-                <span className="text-tt-red text-[11px]">Xem →</span>
+                <span className="text-brand-red text-[11px]">Xem →</span>
               </Link>
             ))}
           </div>
@@ -312,7 +312,7 @@ function StatCard({
 
 function MiniStat({ label, value, highlight }: { label: string; value: number; highlight?: boolean }) {
   return (
-    <div className={`rounded-xl p-2.5 text-center ${highlight ? "bg-tt-red text-white" : "bg-white"}`}>
+    <div className={`rounded-xl p-2.5 text-center ${highlight ? "bg-brand-red text-white" : "bg-white"}`}>
       <div className="text-lg font-bold">{value}</div>
       <div className={`text-[10px] ${highlight ? "opacity-90" : "text-gray-500"}`}>{label}</div>
     </div>

@@ -27,7 +27,7 @@ export default function WishlistButton({
     >
       <Heart
         size={size}
-        className={active ? "fill-tt-red text-tt-red" : "text-gray-500"}
+        className={active ? "fill-brand-red text-brand-red" : "text-gray-500"}
       />
     </button>
   );

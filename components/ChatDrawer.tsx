@@ -127,7 +127,7 @@ export default function ChatDrawer({
         onClick={(e) => e.stopPropagation()}
       >
         {/* Header */}
-        <header className="bg-gradient-to-r from-tt-red to-[#ff6e47] text-white px-3 py-2.5 flex items-center gap-2">
+        <header className="bg-gradient-to-r from-brand-red to-[#ff6e47] text-white px-3 py-2.5 flex items-center gap-2">
           <div className="w-9 h-9 rounded-full bg-white/25 flex items-center justify-center font-bold">
             {shopName[0]}
           </div>
@@ -168,7 +168,7 @@ export default function ChatDrawer({
             <button
               key={q}
               onClick={() => send(q)}
-              className="shrink-0 text-[11px] border border-tt-red/40 text-tt-red px-2.5 py-1 rounded-full"
+              className="shrink-0 text-[11px] border border-brand-red/40 text-brand-red px-2.5 py-1 rounded-full"
             >
               {q}
             </button>
@@ -198,7 +198,7 @@ export default function ChatDrawer({
           <button
             type="submit"
             disabled={!input.trim()}
-            className="w-9 h-9 rounded-full bg-tt-red text-white flex items-center justify-center disabled:opacity-40"
+            className="w-9 h-9 rounded-full bg-brand-red text-white flex items-center justify-center disabled:opacity-40"
           >
             <Send size={16} />
           </button>
@@ -229,7 +229,7 @@ function MsgBubble({ msg }: { msg: Msg }) {
       <div
         className={`max-w-[78%] px-3 py-2 text-[13px] whitespace-pre-wrap leading-relaxed ${
           mine
-            ? "bg-tt-red text-white rounded-2xl rounded-tr-md"
+            ? "bg-brand-red text-white rounded-2xl rounded-tr-md"
             : "bg-white text-gray-900 rounded-2xl rounded-tl-md"
         }`}
       >

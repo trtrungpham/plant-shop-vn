@@ -44,7 +44,7 @@ export default async function ShopPage(props: PageProps<"/shop/[slug]">) {
       </header>
 
       {/* Shop banner */}
-      <section className="bg-gradient-to-br from-tt-red via-[#ff3d5b] to-[#ff6e47] text-white px-4 py-5">
+      <section className="bg-gradient-to-br from-brand-red via-[#ff3d5b] to-[#ff6e47] text-white px-4 py-5">
         <div className="flex items-center gap-3">
           <div className="w-16 h-16 rounded-full bg-white/25 border-2 border-white flex items-center justify-center text-2xl font-bold">
             {shopName[0]}
@@ -62,7 +62,7 @@ export default async function ShopPage(props: PageProps<"/shop/[slug]">) {
               <span>{totalReviews.toLocaleString()} đánh giá</span>
             </div>
           </div>
-          <button className="bg-white text-tt-red text-xs font-semibold px-3 py-1.5 rounded-full">
+          <button className="bg-white text-brand-red text-xs font-semibold px-3 py-1.5 rounded-full">
             + Theo dõi
           </button>
         </div>
@@ -78,7 +78,7 @@ export default async function ShopPage(props: PageProps<"/shop/[slug]">) {
       {/* Shop intro */}
       <section className="bg-white px-3 py-3 border-b border-gray-100">
         <div className="flex items-start gap-2 text-[12px] text-gray-700">
-          <Store size={14} className="text-tt-red shrink-0 mt-0.5" />
+          <Store size={14} className="text-brand-red shrink-0 mt-0.5" />
           <p className="leading-relaxed">
             Chuyên cung cấp cây cảnh chất lượng cao — cam kết cây khoẻ, lá đẹp, bao
             sống 7 ngày. Tặng kèm hướng dẫn chăm & phân bón. Freeship toàn quốc đơn từ
@@ -93,7 +93,7 @@ export default async function ShopPage(props: PageProps<"/shop/[slug]">) {
           <button
             key={f}
             className={`shrink-0 text-[12px] px-3 py-1.5 rounded-full ${
-              i === 0 ? "bg-tt-red text-white" : "bg-gray-100 text-gray-700"
+              i === 0 ? "bg-brand-red text-white" : "bg-gray-100 text-gray-700"
             }`}
           >
             {f}

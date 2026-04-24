@@ -24,8 +24,8 @@ export default function WishlistPage() {
 
       {items.length === 0 ? (
         <div className="flex flex-col items-center justify-center py-20 px-6 text-center">
-          <div className="w-16 h-16 rounded-full bg-tt-red/10 flex items-center justify-center">
-            <Heart size={28} className="text-tt-red" />
+          <div className="w-16 h-16 rounded-full bg-brand-red/10 flex items-center justify-center">
+            <Heart size={28} className="text-brand-red" />
           </div>
           <p className="mt-3 text-[14px] font-medium">Chưa có sản phẩm yêu thích</p>
           <p className="mt-1 text-[12px] text-gray-500">
@@ -33,7 +33,7 @@ export default function WishlistPage() {
           </p>
           <Link
             href="/"
-            className="mt-4 bg-tt-red text-white px-5 py-2 rounded-full text-sm font-medium"
+            className="mt-4 bg-brand-red text-white px-5 py-2 rounded-full text-sm font-medium"
           >
             Khám phá ngay
           </Link>

@@ -59,7 +59,7 @@ function SearchInner() {
           </section>
           <section>
             <h3 className="text-[13px] font-semibold flex items-center gap-1">
-              <TrendingUp size={14} className="text-tt-red" /> Tìm kiếm thịnh hành
+              <TrendingUp size={14} className="text-brand-red" /> Tìm kiếm thịnh hành
             </h3>
             <div className="flex flex-wrap gap-2 mt-2">
               {TRENDING.map((t, i) => (
@@ -68,7 +68,7 @@ function SearchInner() {
                   onClick={() => setQ(t)}
                   className="text-[12px] bg-white px-3 py-1.5 rounded-full flex items-center gap-1"
                 >
-                  {i < 3 && <span className="text-tt-red font-bold">{i + 1}.</span>}
+                  {i < 3 && <span className="text-brand-red font-bold">{i + 1}.</span>}
                   <span>{t}</span>
                 </button>
               ))}

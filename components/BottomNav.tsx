@@ -33,19 +33,19 @@ export default function BottomNav() {
                 href={href}
                 className={clsx(
                   "flex flex-col items-center gap-0.5 py-1 relative",
-                  active ? "text-tt-red" : "text-gray-600"
+                  active ? "text-brand-red" : "text-gray-600"
                 )}
               >
                 <div className="relative">
                   {live ? (
-                    <div className="w-9 h-9 rounded-full bg-gradient-to-br from-tt-red to-[#ff6e47] flex items-center justify-center text-white">
+                    <div className="w-9 h-9 rounded-full bg-gradient-to-br from-brand-red to-[#ff6e47] flex items-center justify-center text-white">
                       <Video size={16} strokeWidth={2.5} />
                     </div>
                   ) : (
                     <Icon size={22} strokeWidth={active ? 2.5 : 2} />
                   )}
                   {badge && count > 0 && (
-                    <span className="absolute -top-1.5 -right-2 bg-tt-red text-white text-[10px] leading-none font-bold min-w-[16px] h-4 px-1 rounded-full flex items-center justify-center">
+                    <span className="absolute -top-1.5 -right-2 bg-brand-red text-white text-[10px] leading-none font-bold min-w-[16px] h-4 px-1 rounded-full flex items-center justify-center">
                       {count > 99 ? "99+" : count}
                     </span>
                   )}
@@ -53,7 +53,7 @@ export default function BottomNav() {
                 <span
                   className={clsx(
                     "text-[10px] leading-tight font-medium",
-                    live && "text-tt-red"
+                    live && "text-brand-red"
                   )}
                 >
                   {label}

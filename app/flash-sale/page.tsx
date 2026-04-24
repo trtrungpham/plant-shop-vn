@@ -39,7 +39,7 @@ export default function FlashSalePage() {
 
   return (
     <>
-      <header className="sticky top-0 z-30 bg-gradient-to-r from-tt-red to-[#ff3d5b] text-white px-3 py-3 flex items-center gap-2">
+      <header className="sticky top-0 z-30 bg-gradient-to-r from-brand-red to-[#ff3d5b] text-white px-3 py-3 flex items-center gap-2">
         <Link href="/" className="w-8 h-8 flex items-center justify-center text-white">
           <ArrowLeft size={22} />
         </Link>
@@ -70,7 +70,7 @@ export default function FlashSalePage() {
               key={slot.label}
               className={`shrink-0 flex flex-col items-center justify-center w-16 py-1.5 rounded-lg ${
                 slot.status === "live"
-                  ? "bg-tt-red text-white"
+                  ? "bg-brand-red text-white"
                   : slot.status === "upcoming"
                   ? "bg-gray-100 text-gray-700"
                   : "bg-gray-50 text-gray-400"
@@ -88,7 +88,7 @@ export default function FlashSalePage() {
       {/* Flash products list */}
       <section className="bg-white mt-2">
         <div className="px-3 py-2 border-b border-gray-100">
-          <h3 className="text-[13px] font-bold text-tt-red">🔥 ĐANG BÁN CHẠY</h3>
+          <h3 className="text-[13px] font-bold text-brand-red">🔥 ĐANG BÁN CHẠY</h3>
         </div>
         <div className="divide-y divide-gray-50">
           {flashItems.map((p) => {
@@ -98,19 +98,19 @@ export default function FlashSalePage() {
               <Link key={p.id} href={`/product/${p.id}`} className="flex items-center gap-3 px-3 py-3">
                 <div className="relative w-[90px] h-[90px] rounded-lg overflow-hidden bg-gray-100 shrink-0">
                   <Image src={p.images[0]} alt={p.name} fill sizes="90px" className="object-cover" />
-                  <div className="absolute top-1 left-1 bg-tt-red text-white text-[9px] font-bold px-1 rounded">
+                  <div className="absolute top-1 left-1 bg-brand-red text-white text-[9px] font-bold px-1 rounded">
                     -{off}%
                   </div>
                 </div>
                 <div className="flex-1 min-w-0">
                   <h3 className="text-[13px] line-clamp-2 leading-tight">{p.name}</h3>
                   <div className="mt-1 flex items-baseline gap-1">
-                    <span className="text-tt-red font-bold text-base">{formatVND(p.price)}</span>
+                    <span className="text-brand-red font-bold text-base">{formatVND(p.price)}</span>
                     <span className="text-[11px] text-gray-400 line-through">{formatVND(p.originalPrice)}</span>
                   </div>
-                  <div className="mt-2 relative h-5 bg-tt-red/10 rounded-full overflow-hidden">
+                  <div className="mt-2 relative h-5 bg-brand-red/10 rounded-full overflow-hidden">
                     <div
-                      className="absolute inset-y-0 left-0 bg-gradient-to-r from-tt-red to-tt-orange"
+                      className="absolute inset-y-0 left-0 bg-gradient-to-r from-brand-red to-brand-orange"
                       style={{ width: `${soldPct}%` }}
                     />
                     <div className="absolute inset-0 flex items-center justify-center text-[10px] font-bold text-white drop-shadow">
@@ -128,7 +128,7 @@ export default function FlashSalePage() {
       <section className="bg-white mt-2 px-3 py-3">
         <div className="flex items-center justify-between mb-2">
           <h3 className="text-[13px] font-bold">Sắp mở bán lúc 18:00</h3>
-          <button className="text-[11px] text-tt-red flex items-center gap-1">
+          <button className="text-[11px] text-brand-red flex items-center gap-1">
             <Bell size={12} /> Nhắc tôi
           </button>
         </div>

@@ -22,12 +22,12 @@ export default function ProductCard({ product }: { product: Product }) {
           className="object-cover"
         />
         {product.flashSale && (
-          <div className="absolute top-1.5 left-1.5 bg-gradient-to-r from-tt-red to-tt-orange text-white text-[10px] font-bold px-1.5 py-0.5 rounded">
+          <div className="absolute top-1.5 left-1.5 bg-gradient-to-r from-brand-red to-brand-orange text-white text-[10px] font-bold px-1.5 py-0.5 rounded">
             ⚡ FLASH SALE
           </div>
         )}
         {product.freeship && (
-          <div className="absolute bottom-1.5 left-1.5 bg-tt-cyan/20 text-[#0c9c94] text-[10px] font-semibold px-1.5 py-0.5 rounded">
+          <div className="absolute bottom-1.5 left-1.5 bg-brand-cyan/20 text-[#0c9c94] text-[10px] font-semibold px-1.5 py-0.5 rounded">
             XTRA Freeship
           </div>
         )}
@@ -40,11 +40,11 @@ export default function ProductCard({ product }: { product: Product }) {
           {product.name}
         </h3>
         <div className="mt-1 flex items-baseline gap-1">
-          <span className="text-tt-red font-bold text-[15px]">
+          <span className="text-brand-red font-bold text-[15px]">
             {formatVND(product.price)}
           </span>
           {off > 0 && (
-            <span className="text-tt-red text-[10px] font-semibold bg-tt-red/10 px-1 rounded">
+            <span className="text-brand-red text-[10px] font-semibold bg-brand-red/10 px-1 rounded">
               -{off}%
             </span>
           )}
@@ -56,7 +56,7 @@ export default function ProductCard({ product }: { product: Product }) {
         )}
         <div className="mt-1 flex items-center gap-1 text-[11px] text-gray-500">
           <div className="flex items-center gap-0.5">
-            <Star size={11} className="fill-tt-yellow text-tt-yellow" />
+            <Star size={11} className="fill-brand-yellow text-brand-yellow" />
             <span>{product.rating.toFixed(1)}</span>
           </div>
           <span>•</span>

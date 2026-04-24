@@ -14,7 +14,7 @@ export default function Footer() {
           { Icon: CreditCard, label: "PayLater", sub: "Trả sau 0%" },
         ].map((b) => (
           <div key={b.label} className="flex flex-col items-center text-center">
-            <b.Icon size={20} className="text-tt-red" />
+            <b.Icon size={20} className="text-brand-red" />
             <div className="text-[11px] font-semibold mt-1">{b.label}</div>
             <div className="text-[10px] text-gray-500">{b.sub}</div>
           </div>
@@ -29,23 +29,23 @@ export default function Footer() {
         </p>
         <ul className="mt-3 space-y-2 text-[12px] text-gray-700">
           <li className="flex items-start gap-2">
-            <MapPin size={14} className="text-tt-red shrink-0 mt-0.5" />
+            <MapPin size={14} className="text-brand-red shrink-0 mt-0.5" />
             <span>123 Đường Nguyễn Văn Linh, P. Tân Phong, Q.7, TP.HCM</span>
           </li>
           <li className="flex items-start gap-2">
-            <MapPin size={14} className="text-tt-red shrink-0 mt-0.5" />
+            <MapPin size={14} className="text-brand-red shrink-0 mt-0.5" />
             <span>CN Hà Nội: 45 Láng Hạ, Q. Đống Đa, Hà Nội</span>
           </li>
           <li className="flex items-center gap-2">
-            <Phone size={14} className="text-tt-red shrink-0" />
-            <a href="tel:19001234" className="hover:text-tt-red">1900 1234 (8h-22h)</a>
+            <Phone size={14} className="text-brand-red shrink-0" />
+            <a href="tel:19001234" className="hover:text-brand-red">1900 1234 (8h-22h)</a>
           </li>
           <li className="flex items-center gap-2">
-            <Mail size={14} className="text-tt-red shrink-0" />
-            <a href="mailto:hello@plantshop.vn" className="hover:text-tt-red">hello@plantshop.vn</a>
+            <Mail size={14} className="text-brand-red shrink-0" />
+            <a href="mailto:hello@plantshop.vn" className="hover:text-brand-red">hello@plantshop.vn</a>
           </li>
           <li className="flex items-center gap-2">
-            <Clock size={14} className="text-tt-red shrink-0" />
+            <Clock size={14} className="text-brand-red shrink-0" />
             <span>Mở cửa: 8:00 - 22:00 (T2 - CN)</span>
           </li>
         </ul>
@@ -55,12 +55,12 @@ export default function Footer() {
       <section className="px-3 py-4 border-b border-gray-50">
         <h3 className="text-[13px] font-bold mb-2">Chính sách</h3>
         <div className="grid grid-cols-2 gap-y-2 text-[12px] text-gray-700">
-          <Link href="/policy/shipping" className="hover:text-tt-red">🚚 Vận chuyển</Link>
-          <Link href="/policy/return" className="hover:text-tt-red">↩️ Đổi trả & hoàn tiền</Link>
-          <Link href="/policy/warranty" className="hover:text-tt-red">🛡 Bảo hành cây sống</Link>
-          <Link href="/policy/privacy" className="hover:text-tt-red">🔒 Bảo mật thông tin</Link>
-          <Link href="/policy/payment" className="hover:text-tt-red">💳 Thanh toán</Link>
-          <Link href="/policy/care" className="hover:text-tt-red">🌱 Hướng dẫn chăm cây</Link>
+          <Link href="/policy/shipping" className="hover:text-brand-red">🚚 Vận chuyển</Link>
+          <Link href="/policy/return" className="hover:text-brand-red">↩️ Đổi trả & hoàn tiền</Link>
+          <Link href="/policy/warranty" className="hover:text-brand-red">🛡 Bảo hành cây sống</Link>
+          <Link href="/policy/privacy" className="hover:text-brand-red">🔒 Bảo mật thông tin</Link>
+          <Link href="/policy/payment" className="hover:text-brand-red">💳 Thanh toán</Link>
+          <Link href="/policy/care" className="hover:text-brand-red">🌱 Hướng dẫn chăm cây</Link>
         </div>
       </section>
 
@@ -68,12 +68,12 @@ export default function Footer() {
       <section className="px-3 py-4 border-b border-gray-50">
         <h3 className="text-[13px] font-bold mb-2">Về chúng tôi</h3>
         <div className="grid grid-cols-2 gap-y-2 text-[12px] text-gray-700">
-          <Link href="/about" className="hover:text-tt-red">Giới thiệu</Link>
-          <Link href="/blog" className="hover:text-tt-red">Blog chăm cây</Link>
-          <Link href="/careers" className="hover:text-tt-red">Tuyển dụng</Link>
-          <Link href="/affiliate" className="hover:text-tt-red">Cộng tác viên</Link>
-          <Link href="/contact" className="hover:text-tt-red">Liên hệ</Link>
-          <Link href="/faq" className="hover:text-tt-red">Câu hỏi thường gặp</Link>
+          <Link href="/about" className="hover:text-brand-red">Giới thiệu</Link>
+          <Link href="/blog" className="hover:text-brand-red">Blog chăm cây</Link>
+          <Link href="/careers" className="hover:text-brand-red">Tuyển dụng</Link>
+          <Link href="/affiliate" className="hover:text-brand-red">Cộng tác viên</Link>
+          <Link href="/contact" className="hover:text-brand-red">Liên hệ</Link>
+          <Link href="/faq" className="hover:text-brand-red">Câu hỏi thường gặp</Link>
         </div>
       </section>
 
@@ -81,12 +81,12 @@ export default function Footer() {
       <section className="px-3 py-4 border-b border-gray-50">
         <h3 className="text-[13px] font-bold mb-2">Tiện ích</h3>
         <div className="grid grid-cols-2 gap-y-2 text-[12px] text-gray-700">
-          <Link href="/flash-sale" className="hover:text-tt-red">⚡ Flash Sale</Link>
-          <Link href="/vouchers" className="hover:text-tt-red">🎟 Kho voucher</Link>
-          <Link href="/wishlist" className="hover:text-tt-red">💗 Yêu thích</Link>
-          <Link href="/orders" className="hover:text-tt-red">📦 Đơn hàng</Link>
-          <Link href="/messages" className="hover:text-tt-red">💬 Tin nhắn</Link>
-          <Link href="/admin" className="hover:text-tt-red">🛡 Admin shop</Link>
+          <Link href="/flash-sale" className="hover:text-brand-red">⚡ Flash Sale</Link>
+          <Link href="/vouchers" className="hover:text-brand-red">🎟 Kho voucher</Link>
+          <Link href="/wishlist" className="hover:text-brand-red">💗 Yêu thích</Link>
+          <Link href="/orders" className="hover:text-brand-red">📦 Đơn hàng</Link>
+          <Link href="/messages" className="hover:text-brand-red">💬 Tin nhắn</Link>
+          <Link href="/admin" className="hover:text-brand-red">🛡 Admin shop</Link>
         </div>
       </section>
 
@@ -120,7 +120,7 @@ export default function Footer() {
             <Link
               key={h}
               href={`/search?q=${encodeURIComponent(h.replace("#", ""))}`}
-              className="text-[11px] text-tt-red bg-tt-red/5 px-2 py-1 rounded-full hover:bg-tt-red/15"
+              className="text-[11px] text-brand-red bg-brand-red/5 px-2 py-1 rounded-full hover:bg-brand-red/15"
             >
               {h}
             </Link>

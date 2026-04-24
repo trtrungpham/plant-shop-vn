@@ -29,7 +29,7 @@ export default function CartPage() {
           <p className="mt-3 text-sm">Giỏ hàng đang trống</p>
           <Link
             href="/"
-            className="mt-4 bg-tt-red text-white px-5 py-2 rounded-full text-sm font-medium"
+            className="mt-4 bg-brand-red text-white px-5 py-2 rounded-full text-sm font-medium"
           >
             Mua sắm ngay
           </Link>
@@ -45,7 +45,7 @@ export default function CartPage() {
                 <div className="text-[11px] text-gray-500">{item.shop}</div>
                 <h3 className="text-[13px] line-clamp-2 leading-tight">{item.name}</h3>
                 <div className="mt-1 flex items-center justify-between">
-                  <div className="text-tt-red font-bold text-[15px]">
+                  <div className="text-brand-red font-bold text-[15px]">
                     {formatVND(item.price)}
                   </div>
                   <div className="flex items-center gap-0 border border-gray-200 rounded-md">
@@ -80,11 +80,11 @@ export default function CartPage() {
         <div className="fixed bottom-[64px] left-1/2 -translate-x-1/2 w-full max-w-[480px] bg-white border-t border-gray-100 px-3 py-3 flex items-center gap-3 z-30">
           <div className="flex-1">
             <div className="text-[11px] text-gray-500">Tổng cộng</div>
-            <div className="text-tt-red font-bold text-xl">{formatVND(total)}</div>
+            <div className="text-brand-red font-bold text-xl">{formatVND(total)}</div>
           </div>
           <button
             onClick={() => router.push("/checkout")}
-            className="bg-gradient-to-r from-tt-red to-[#ff3d5b] text-white font-bold px-6 py-3 rounded-full text-sm"
+            className="bg-gradient-to-r from-brand-red to-[#ff3d5b] text-white font-bold px-6 py-3 rounded-full text-sm"
           >
             Mua hàng
           </button>

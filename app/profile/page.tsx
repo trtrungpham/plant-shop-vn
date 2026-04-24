@@ -39,7 +39,7 @@ export default function ProfilePage() {
 
   return (
     <div className="min-h-screen">
-      <div className="bg-gradient-to-br from-tt-red to-[#ff6e47] px-4 pt-8 pb-6 text-white relative">
+      <div className="bg-gradient-to-br from-brand-red to-[#ff6e47] px-4 pt-8 pb-6 text-white relative">
         <div className="absolute top-3 right-3 flex gap-3">
           <Link href="/admin" aria-label="Cài đặt">
             <Settings size={22} />
@@ -73,9 +73,9 @@ export default function ProfilePage() {
                 className="flex flex-col items-center gap-1 text-gray-700 relative"
               >
                 <div className="relative">
-                  <o.icon size={22} className="text-tt-red" />
+                  <o.icon size={22} className="text-brand-red" />
                   {n > 0 && (
-                    <span className="absolute -top-1 -right-2 bg-tt-red text-white text-[9px] leading-none font-bold min-w-[16px] h-4 px-1 rounded-full flex items-center justify-center">
+                    <span className="absolute -top-1 -right-2 bg-brand-red text-white text-[9px] leading-none font-bold min-w-[16px] h-4 px-1 rounded-full flex items-center justify-center">
                       {n}
                     </span>
                   )}

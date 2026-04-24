@@ -84,13 +84,13 @@ export default function CheckoutPage() {
         <div className="flex gap-2 mt-6">
           <Link
             href={`/orders/${placedOrderId}`}
-            className="bg-white border border-tt-red text-tt-red font-semibold px-5 py-2.5 rounded-full text-sm"
+            className="bg-white border border-brand-red text-brand-red font-semibold px-5 py-2.5 rounded-full text-sm"
           >
             Xem đơn hàng
           </Link>
           <Link
             href="/"
-            className="bg-tt-red text-white font-semibold px-5 py-2.5 rounded-full text-sm"
+            className="bg-brand-red text-white font-semibold px-5 py-2.5 rounded-full text-sm"
           >
             Tiếp tục mua
           </Link>
@@ -120,20 +120,20 @@ export default function CheckoutPage() {
 
       <section className="bg-white px-3 py-3 mt-2">
         <div className="flex items-start gap-2">
-          <MapPin size={18} className="text-tt-red shrink-0 mt-0.5" />
+          <MapPin size={18} className="text-brand-red shrink-0 mt-0.5" />
           <div className="flex-1">
             <div className="text-[13px] font-semibold">Địa chỉ nhận hàng</div>
             <input
               value={name}
               onChange={(e) => setName(e.target.value)}
               placeholder="Họ tên"
-              className="mt-2 w-full text-[13px] border-b border-gray-100 py-1.5 outline-none focus:border-tt-red"
+              className="mt-2 w-full text-[13px] border-b border-gray-100 py-1.5 outline-none focus:border-brand-red"
             />
             <input
               value={phone}
               onChange={(e) => setPhone(e.target.value)}
               placeholder="Số điện thoại"
-              className="mt-1 w-full text-[13px] border-b border-gray-100 py-1.5 outline-none focus:border-tt-red"
+              className="mt-1 w-full text-[13px] border-b border-gray-100 py-1.5 outline-none focus:border-brand-red"
               inputMode="tel"
             />
             <textarea
@@ -141,7 +141,7 @@ export default function CheckoutPage() {
               onChange={(e) => setAddress(e.target.value)}
               placeholder="Địa chỉ cụ thể (số nhà, phường, quận, tỉnh)"
               rows={2}
-              className="mt-1 w-full text-[13px] border-b border-gray-100 py-1.5 outline-none focus:border-tt-red resize-none"
+              className="mt-1 w-full text-[13px] border-b border-gray-100 py-1.5 outline-none focus:border-brand-red resize-none"
             />
           </div>
         </div>
@@ -157,7 +157,7 @@ export default function CheckoutPage() {
               <div className="text-[11px] text-gray-500">{item.shop}</div>
               <h3 className="text-[13px] line-clamp-2 leading-tight">{item.name}</h3>
               <div className="mt-1 flex items-center justify-between">
-                <div className="text-tt-red font-semibold text-[13px]">{formatVND(item.price)}</div>
+                <div className="text-brand-red font-semibold text-[13px]">{formatVND(item.price)}</div>
                 <div className="text-[12px] text-gray-500">x{item.qty}</div>
               </div>
             </div>
@@ -171,7 +171,7 @@ export default function CheckoutPage() {
           value={note}
           onChange={(e) => setNote(e.target.value)}
           placeholder="VD: Giao giờ hành chính, gói kỹ, tặng thiệp..."
-          className="mt-1 w-full text-[13px] border-b border-gray-100 py-1.5 outline-none focus:border-tt-red"
+          className="mt-1 w-full text-[13px] border-b border-gray-100 py-1.5 outline-none focus:border-brand-red"
         />
       </section>
 
@@ -180,10 +180,10 @@ export default function CheckoutPage() {
         onClick={() => setVoucherOpen(true)}
         className="bg-white mt-2 px-3 py-3 w-full flex items-center gap-2 text-[13px] text-left"
       >
-        <Ticket size={18} className="text-tt-red" />
+        <Ticket size={18} className="text-brand-red" />
         <span className="flex-1">
           {voucher ? (
-            <span className="text-tt-red font-semibold">
+            <span className="text-brand-red font-semibold">
               {voucher.title}
               {voucher.type !== "freeship" && discount > 0 && (
                 <span className="text-gray-500 font-normal"> — giảm {formatVND(discount)}</span>
@@ -233,29 +233,29 @@ export default function CheckoutPage() {
         {freeshipSaved > 0 && (
           <div className="flex justify-between">
             <span className="text-gray-600">Voucher freeship</span>
-            <span className="text-tt-red">-{formatVND(freeshipSaved)}</span>
+            <span className="text-brand-red">-{formatVND(freeshipSaved)}</span>
           </div>
         )}
         {effectiveDiscount > 0 && (
           <div className="flex justify-between">
             <span className="text-gray-600">Voucher giảm</span>
-            <span className="text-tt-red">-{formatVND(effectiveDiscount)}</span>
+            <span className="text-brand-red">-{formatVND(effectiveDiscount)}</span>
           </div>
         )}
         <div className="flex justify-between pt-2 border-t border-gray-100 font-semibold">
           <span>Tổng thanh toán</span>
-          <span className="text-tt-red text-base">{formatVND(finalTotal)}</span>
+          <span className="text-brand-red text-base">{formatVND(finalTotal)}</span>
         </div>
       </section>
 
       <div className="fixed bottom-0 left-1/2 -translate-x-1/2 w-full max-w-[480px] bg-white border-t border-gray-100 px-3 py-3 flex items-center gap-3 z-30">
         <div className="flex-1">
           <div className="text-[11px] text-gray-500">Tổng</div>
-          <div className="text-tt-red font-bold text-xl">{formatVND(finalTotal)}</div>
+          <div className="text-brand-red font-bold text-xl">{formatVND(finalTotal)}</div>
         </div>
         <button
           onClick={placeOrder}
-          className="bg-gradient-to-r from-tt-red to-[#ff3d5b] text-white font-bold px-6 py-3 rounded-full text-sm"
+          className="bg-gradient-to-r from-brand-red to-[#ff3d5b] text-white font-bold px-6 py-3 rounded-full text-sm"
         >
           Đặt hàng
         </button>
@@ -283,7 +283,7 @@ export default function CheckoutPage() {
               />
               <button
                 onClick={applyVoucherCode}
-                className="bg-tt-red text-white text-sm font-semibold px-4 rounded-full"
+                className="bg-brand-red text-white text-sm font-semibold px-4 rounded-full"
               >
                 Áp dụng
               </button>
@@ -304,10 +304,10 @@ export default function CheckoutPage() {
                       setVoucherOpen(false);
                     }}
                     className={`w-full text-left flex items-center gap-3 border rounded-xl p-3 ${
-                      isSelected ? "border-tt-red bg-tt-red/5" : "border-gray-200"
+                      isSelected ? "border-brand-red bg-brand-red/5" : "border-gray-200"
                     }`}
                   >
-                    <div className="w-12 h-12 rounded bg-tt-red/10 flex items-center justify-center text-tt-red text-xl">
+                    <div className="w-12 h-12 rounded bg-brand-red/10 flex items-center justify-center text-brand-red text-xl">
                       🎟
                     </div>
                     <div className="flex-1 min-w-0">
@@ -315,7 +315,7 @@ export default function CheckoutPage() {
                       <div className="text-[11px] text-gray-500 line-clamp-1">{v.description}</div>
                       <div className="text-[10px] text-gray-400 mt-0.5 font-mono">{v.code}</div>
                     </div>
-                    {isSelected && <CheckCircle2 size={18} className="text-tt-red" />}
+                    {isSelected && <CheckCircle2 size={18} className="text-brand-red" />}
                   </button>
                 );
               })}
@@ -346,12 +346,12 @@ export default function CheckoutPage() {
                     setPaymentOpen(false);
                   }}
                   className={`w-full flex items-center gap-3 p-3 rounded-xl border text-left ${
-                    payment.key === m.key ? "border-tt-red bg-tt-red/5" : "border-gray-200"
+                    payment.key === m.key ? "border-brand-red bg-brand-red/5" : "border-gray-200"
                   }`}
                 >
                   <span className="text-xl">{m.icon}</span>
                   <span className="flex-1 text-[13px]">{m.label}</span>
-                  {payment.key === m.key && <CheckCircle2 size={18} className="text-tt-red" />}
+                  {payment.key === m.key && <CheckCircle2 size={18} className="text-brand-red" />}
                 </button>
               ))}
             </div>
